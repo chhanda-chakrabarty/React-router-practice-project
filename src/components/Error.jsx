@@ -1,4 +1,5 @@
 import React from "react";
+import HomeButton from "./HomeButton";
 
 const Error = () => {
   return (
@@ -327,6 +328,7 @@ const Error = () => {
           <p class="md:text-lg xl:text-xl text-gray-500 mt-4">
             Whoops, something went wrong on our servers.
           </p>
+          {<HomeButton />}
         </div>
       </div>
     </div>

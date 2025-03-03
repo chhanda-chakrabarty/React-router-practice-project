@@ -50,6 +50,14 @@ const Navbar = () => {
               About
             </NavLink>
             <NavLink
+              to="/review"
+              className={({ isActive }) =>
+                isActive ? "text-red-500 hover:text-red-900" : "text-black"
+              }
+            >
+              Review
+            </NavLink>
+            <NavLink
               to="/contact"
               className={({ isActive }) =>
                 isActive ? "text-red-500 hover:text-red-900" : "text-black"

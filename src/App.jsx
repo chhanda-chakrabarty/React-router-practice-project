@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router";
+import { BrowserRouter, Routes, Route, Router } from "react-router";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import Footer from "./components/Footer";
@@ -10,6 +10,8 @@ import Product from "./components/Product";
 import About from "./components/About";
 import CommonLayout from "./components/CommonLayout";
 import Error from "./components/Error";
+import Review from "./components/Review";
+import UserInfo from "./components/UserInfo";
 
 // const chhandaTaka = () => {
 //   return (
@@ -30,9 +32,11 @@ const App = () => {
           <Route path="/about" element={<About />}></Route>
           <Route path="/product" element={<Product />}></Route>
           <Route path="/contact" element={<Contact />}></Route>
+          <Route path="/review" element={<Review />}></Route>
+          <Route path="/users/:name" element={<UserInfo />}></Route>
           <Route path="/footer" element={<Footer />}></Route>
-          <Route path="*" element={<Error />}></Route>
         </Route>
+        <Route path="*" element={<Error />}></Route>
       </Routes>
     </BrowserRouter>
   );

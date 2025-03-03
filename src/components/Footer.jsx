@@ -1,6 +1,14 @@
 import React from "react";
+import { useNavigate } from "react-router";
 
 const Footer = () => {
+  const navigate = useNavigate();
+  const handleGoto = () => {
+    navigate("/");
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }, 100);
+  };
   return (
     <div>
       <footer class="bg-blue-100/80 font-sans dark:bg-gray-900">
@@ -31,7 +39,10 @@ const Footer = () => {
               </p>
 
               <div class="flex flex-col items-start mt-5 space-y-2">
-                <p class="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:cursor-pointer hover:text-blue-500">
+                <p
+                  class="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:cursor-pointer hover:text-blue-500"
+                  onClick={handleGoto}
+                >
                   Home
                 </p>
                 <p class="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:cursor-pointer hover:text-blue-500">
